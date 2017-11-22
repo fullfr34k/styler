@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:styler"
+             x:Class="styler.MainPage"
+             Title="Styler"
+             Icon="">
+
+    <StackLayout Padding="0,20,0,0">
+
+        
+        <Image Source="pjimage.jpg" 
+               Aspect="AspectFill"
+               Margin="20"/>
+
+        <Label x:Name="mainLabel" 
+               Text="This is an app to let you select the type of service you require" 
+               Margin="15, 20, 15, 5"
+               FontSize="20"/>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
+            <Picker x:Name="locationPicker" 
+                    Title="Select Location">
+                <Picker.Items>
+                    <x:String>Lekki</x:String>
+                    <x:String>Ikoyi</x:String>
+                    <!--<x:String>Victoria Island</x:String>-->
+                </Picker.Items>
+            </Picker>
+
+            <Picker x:Name="stylePicker" 
+                    Title="Select Style">
+                <Picker.Items>
+                    <x:String>Hair</x:String>
+                    <!--<x:String>Nails</x:String>-->
+                    <x:String>Facials</x:String>
+                </Picker.Items>
+            </Picker>
+        </StackLayout>
+
+        <Button Clicked="Button_Clicked" 
+                Text="Search"  
+                WidthRequest="100"
+                HorizontalOptions="Center"/>
+                <!--BackgroundColor="Gray"-->
+            <!--TextColor="Blue"-->
+
+    </StackLayout>
+
+</ContentPage>
